@@ -5,6 +5,8 @@ import { IconHierarchy, IconBuildingStore, IconKey, IconTool, IconLock } from '@
 const icons = { IconHierarchy, IconBuildingStore, IconKey, IconTool, IconLock }
 
 // ==============================|| DASHBOARD MENU ITEMS ||============================== //
+// 导入国际化
+import i18n from '../locale/index'
 
 const dashboard = {
     id: 'dashboard',
@@ -13,7 +15,7 @@ const dashboard = {
     children: [
         {
             id: 'chatflows',
-            title: 'Chatflows',
+            title: i18n.t('Chatflows'),
             type: 'item',
             url: '/chatflows',
             icon: icons.IconHierarchy,
@@ -21,7 +23,7 @@ const dashboard = {
         },
         {
             id: 'marketplaces',
-            title: 'Marketplaces',
+            title: i18n.t('Marketplaces'),
             type: 'item',
             url: '/marketplaces',
             icon: icons.IconBuildingStore,
@@ -29,7 +31,7 @@ const dashboard = {
         },
         {
             id: 'tools',
-            title: 'Tools',
+            title: i18n.t('Tools'),
             type: 'item',
             url: '/tools',
             icon: icons.IconTool,
@@ -37,7 +39,7 @@ const dashboard = {
         },
         {
             id: 'credentials',
-            title: 'Credentials',
+            title: i18n.t('Credentials'),
             type: 'item',
             url: '/credentials',
             icon: icons.IconLock,
@@ -45,7 +47,7 @@ const dashboard = {
         },
         {
             id: 'apikey',
-            title: 'API Keys',
+            title: i18n.t('API Keys'),
             type: 'item',
             url: '/apikey',
             icon: icons.IconKey,
