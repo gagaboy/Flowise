@@ -3,5 +3,7 @@
     "Marketplaces": "Marketplaces",
     "Tools": "Tools",
     "Credentials": "Credentials",
-    "API Keys": "API Keys"
+    "APIKeys": "API Keys",
+    "NewChatFlow": "Add New",
+    "NoChatflows": "No Chatflows Yet"
 }

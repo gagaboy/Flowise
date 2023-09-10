@@ -1,7 +1,9 @@
 {
     "Chatflows": "对话流程",
     "Marketplaces": "插件市场",
-    "Tools": "工具集",
-    "Credentials": "证书",
-    "API Keys": "开发秘钥"
+    "Tools": "自定义工具",
+    "Credentials": "第三方认证",
+    "APIKeys": "开发秘钥",
+    "NewChatFlow": "新建流程",
+    "NoChatflows": "尚无任何流程"
 }

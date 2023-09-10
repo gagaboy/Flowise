@@ -6,7 +6,7 @@ const icons = { IconHierarchy, IconBuildingStore, IconKey, IconTool, IconLock }
 
 // ==============================|| DASHBOARD MENU ITEMS ||============================== //
 // 导入国际化
-import i18n from '../locale/index'
+import i18n from 'locale/index'
 
 const dashboard = {
     id: 'dashboard',
@@ -47,7 +47,7 @@ const dashboard = {
         },
         {
             id: 'apikey',
-            title: i18n.t('API Keys'),
+            title: i18n.t('APIKeys'),
             type: 'item',
             url: '/apikey',
             icon: icons.IconKey,

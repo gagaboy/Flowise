@@ -26,6 +26,8 @@ import { baseURL } from 'store/constant'
 // icons
 import { IconPlus } from '@tabler/icons'
 
+// 导入国际化
+import i18n from 'locale/index'
 // ==============================|| CHATFLOWS ||============================== //
 
 const Chatflows = () => {
@@ -103,12 +105,12 @@ const Chatflows = () => {
     return (
         <MainCard sx={{ background: customization.isDarkMode ? theme.palette.common.black : '' }}>
             <Stack flexDirection='row'>
-                <h1>Chatflows</h1>
+                <h1 style={{ width: '200px' }}>{i18n.t('Chatflows')}&nbsp;</h1>
                 <Grid sx={{ mb: 1.25 }} container direction='row'>
                     <Box sx={{ flexGrow: 1 }} />
                     <Grid item>
                         <StyledButton variant='contained' sx={{ color: 'white' }} onClick={addNew} startIcon={<IconPlus />}>
-                            Add New
+                            {i18n.t('NewChatFlow')}
                         </StyledButton>
                     </Grid>
                 </Grid>
@@ -127,7 +129,7 @@ const Chatflows = () => {
                     <Box sx={{ p: 2, height: 'auto' }}>
                         <img style={{ objectFit: 'cover', height: '30vh', width: 'auto' }} src={WorkflowEmptySVG} alt='WorkflowEmptySVG' />
                     </Box>
-                    <div>No Chatflows Yet</div>
+                    <div>{i18n.t('NoChatflows')}</div>
                 </Stack>
             )}
             <LoginDialog show={loginDialogOpen} dialogProps={loginDialogProps} onConfirm={onLoginClick} />
