@@ -32,7 +32,7 @@ class ConversationalRetrievalQAChain_Chains implements INode {
         this.name = 'conversationalRetrievalQAChain'
         this.version = 1.0
         this.type = 'ConversationalRetrievalQAChain'
-        this.icon = 'chain.svg'
+        this.icon = 'qa.svg'
         this.category = 'Chains'
         this.description = 'Document QA - built on RetrievalQAChain to provide a chat history component'
         this.baseClasses = [this.type, ...getBaseClasses(ConversationalRetrievalQAChain)]
@@ -179,7 +179,11 @@ class ConversationalRetrievalQAChain_Chains implements INode {
         const obj = { question: input }
 
         if (options && options.chatHistory && chain.memory) {
-            ;(chain.memory as any).chatHistory = mapChatHistory(options)
+            const chatHistoryClassName = (chain.memory as any).chatHistory.constructor.name
+            // Only replace when its In-Memory
+            if (chatHistoryClassName && chatHistoryClassName === 'ChatMessageHistory') {
+                ;(chain.memory as any).chatHistory = mapChatHistory(options)
+            }
         }
 
         const loggerHandler = new ConsoleCallbackHandler(options.logger)
